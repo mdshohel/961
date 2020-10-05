@@ -1,0 +1,59 @@
+/*****************************
+25 - Components - Pagination
+*****************************/
+
+.pagination{
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 0;
+    &__item{
+        margin: 3px;
+    }
+    &__link{
+        border-radius: 3px;
+        min-width: 32px;
+        height: 32px;
+        background-color: $color-gallery-2;
+        display: block;
+        text-align: center;
+        line-height: 32px;
+        color: $color-shaft;
+        font-size: 14px;
+        font-weight: 500;
+        &.disabled{ 
+			display: none;
+        }
+        &.active{
+            background-color: $primary-color;
+            color: #fff;
+        }
+        &.prev,
+        &.next{
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: $primary-color;
+            color: #fff;
+            i{
+                font-size: 12px;
+                display: inline-block;
+            }
+        }
+        &.prev{
+            i{
+                padding-right: 10px;
+            }
+        }
+        &.next{
+            i{
+                padding-left: 10px;
+            }
+        }
+        &.dots{
+            line-height: 24px;
+        }
+        &:hover{
+            background-color: $primary-color;
+            color: #fff;
+        }
+    }
+}

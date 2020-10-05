@@ -1,0 +1,98 @@
+/*****************************
+29 - Components - Social
+*****************************/
+
+.social{
+    line-height: 1;
+    &__link{
+        display: inline-block;
+        font-size: $body-font-size;
+        color: $heading-color;
+        &:not(:last-child){
+            margin-right: 16px;
+        }
+    }
+
+    &.color{
+        &--white{
+            .social__link{
+				color: $color-white;
+				&:hover{
+					color: $primary-color;
+				}
+            }
+        }
+        &--silver{
+            .social__link{
+				color: $color-silver;
+				&:hover{
+					color: $primary-color;
+				}
+            }
+        }
+        &--nobel{
+            .social__link{
+				color: $color-nobel;
+				&:hover{
+					color: $primary-color;
+				}
+            }
+        }
+    }
+    &.fz{
+        &--14{
+            .social__link{
+                font-size: 14px;
+            }
+        }
+    }
+    &.space{
+        &--14{
+            .social__link{
+                &:not(:last-child){
+                    margin-right: 14px;
+                }
+            }
+        }
+        &--20{
+            .social__link{
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    &.layout-two{
+        .social__link{
+            position: relative;
+            margin: 0;
+            &:not(:last-child){
+                padding-right: 30px;
+                &:after{
+                    position: absolute;
+                    content: "";
+                    left: 65%;
+                    top: 50%;
+                    transform: translate(-50%);
+                    background-color: #363636;
+                    width: 15px;
+                    height: 2px;
+                }
+                @include breakpoint(large){
+                    padding-right: 50px;
+                    &:after{
+                        left: 60%;
+                        width: 22px;
+                    }
+                }
+                @include breakpoint(xlarge){
+                    padding-right: 68px;
+                    &:after{
+                        left: 60%;
+                        width: 28px;
+                    }
+                }
+            }
+        }
+    }
+}

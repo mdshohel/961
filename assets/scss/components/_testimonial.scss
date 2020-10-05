@@ -1,0 +1,78 @@
+.testimonail-area {
+    padding-top: 55px;
+    padding-bottom: 74px;
+	@include breakpoint(medium){
+		padding-top: 64px;
+		padding-bottom: 95px;
+	}
+	@include breakpoint(large){
+		padding-top: 60px;
+	}
+	@include breakpoint(xlarge){
+		padding-top: 100px;
+	}
+	@include breakpoint(xxlarge){
+		padding-top: 120px;
+	}
+}
+
+.testimonial-wrap{
+	position: relative;
+	padding-left: 50px;
+	@include breakpoint(xlarge){
+		padding-left: 100px;
+	}
+	@include breakpoint(xxlarge){
+		padding-left: 130px;
+	}
+	.tns-nav{
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.testimonial{
+	&__text{
+		font-size: 16px;
+		margin-bottom: 20px;
+		@include breakpoint(xlarge){
+			font-size: 19px;
+			margin-bottom: 31px;
+		}
+	}
+	&-author{
+		margin-bottom: 27px;
+		@include breakpoint(xlarge){
+			margin-bottom: 42px;
+		}
+		&__name{
+			font-size: 20px;
+			font-weight: 500;
+			text-transform: capitalize;
+			margin: 0;
+			@include breakpoint(xlarge){
+				font-size: 22px;
+			}
+		}
+		&__role{
+			font-size: 14px;
+		}
+	}
+	&-ratings{
+		&__icons{
+			i{
+				font-weight: 400;
+			}
+		}
+		&__text{
+			color: #0261f3;
+			font-weight: 500;
+			font-size: 16px;
+			@include breakpoint(xlarge){
+				font-size: 19px;
+			}
+		}
+	}
+}

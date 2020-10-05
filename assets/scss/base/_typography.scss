@@ -1,0 +1,248 @@
+/*****************************
+00 - Base - Global
+*****************************/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html{
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	// Default
+	height: 100%;
+	font-size: 37.5%; // 1rem = 6px
+
+	// Medium Device >=768
+	@include breakpoint(medium){
+		font-size: 43.75%;  // 1rem = 7px
+	}
+	
+	// Large Device >=992
+	@include breakpoint(large){
+		font-size: 50%;  // 1rem = 8px
+	}
+
+	// Extra Large Device >=1200
+	@include breakpoint(xlarge){
+		font-size: 56.25%;  // 1rem = 9px
+	}
+
+	// Extra Large Device >=1367
+	@include breakpoint(xxlarge){
+		font-size: 62.5%;  // 1rem = 10px
+	}
+
+}
+body{
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 16px;
+	font-family: $body-font;
+	color: $body-color;
+	line-height: $line-height;
+	background-color: $bg-color;
+	font-weight: 400;
+	overflow-x: hidden;
+	overflow-y: auto;
+	@include breakpoint(xxlarge){
+		font-size: $body-font-size;
+	}
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+	font-weight: 700;
+	font-family: $heading-font;
+	color: $heading-color;
+	margin: 0;
+	margin-bottom: 5px;
+	line-height: $heading-line-height;
+}
+h1, .h1 {
+	font-size: 24px;
+	@include breakpoint(large){
+    	font-size: 28px;
+    }
+    @include breakpoint(xlarge){
+    	font-size: 30px;
+    } 
+} 
+h2, .h2 {
+    font-size: 26px;
+    @include breakpoint(large){
+    	font-size: 28px;
+    }
+}
+h3, .h3 {
+    font-size: 22px;
+    @include breakpoint(large){
+    	font-size: 24px;
+    }
+}
+h4, .h4 {
+    font-size: 18px;
+    @include breakpoint(large){
+    	font-size: 20px;
+    }
+}
+h5, .h5 {
+    font-size: 16px;
+    @include breakpoint(large){
+    	font-size: 18px;
+    }
+}
+h6, .h6 {
+	font-size: 14px; 
+	@include breakpoint(large){
+    	font-size: 16px;
+    }
+}
+p {
+    font-size: 16px; 
+    color: $body-color;
+    font-weight: 400;
+    margin: 0 0 10px;
+	line-height: $line-height;
+	@include breakpoint(xxlarge){
+		font-size: $body-font-size;
+	}
+    &:last-child{
+    	margin-bottom: 0;
+    }
+    &:only-child{
+    	margin-bottom: 0;
+    }
+}
+strong, b{
+	font-weight: bold;
+}
+a{
+	color: inherit;
+}
+// Base
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+figure{
+	margin: 0;
+}
+img{
+	max-width: 100%;
+}
+a, button{
+	transition: $baseTransition;
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover{
+	color: $primary-color;
+	text-decoration: none;
+}
+a:focus,
+button:focus{
+	outline: none;
+}
+
+
+label {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+}
+
+button {
+	border-radius: 0;
+}
+
+button:focus {
+	outline: 1px dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+button,
+input {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+[role="button"] {
+	cursor: pointer;
+}
+
+select {
+	word-wrap: normal;
+}
+
+button,
+[type="button"],
+[type="reset"], 
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	padding: 0;
+	border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+	resize: vertical;
+}
+
+button{
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	&:focus,
+	&:active{
+		outline: none;
+	}
+}
+  
+.sr-only{
+	border: 0;
+	clip: rect(0,0,0,0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}

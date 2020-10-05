@@ -1,0 +1,117 @@
+.searchform{
+	&__popup{
+		@extend %fullwidth;
+		@extend %invisible;
+		@extend %heading-color;
+		@extend %textAcenter;
+		@extend %posfixed;
+		background-color: rgba(255, 255, 255, 0.9);
+		z-index: 999999;
+		@include transition(all ease-in-out .25s);
+	    &.open{
+	    	@extend %visible;
+	    	.searchform__body{
+			    visibility: visible;
+			    opacity: 1;
+			    @include transform(scale(1));
+	    	}
+	    }
+	    .btn-close{
+		    @extend %displayBlock;
+		    @extend %posabsolute;
+		    top: 20%;
+		    right: 20%;
+		    line-height: 40px;
+		    height: 40px;
+		    @include transition(all .3s ease);
+		    i{
+		    	font-size: 40px;
+		    }
+		    @include breakpoint(large){
+		    	right: 10%;
+		    }
+		    @include breakpoint(medium){
+		    	right: 8%;
+		    	font-size: 40px;
+		    }
+		    @include breakpoint(small){
+		    	right: 6%;
+		    	top: 30%;
+		    }
+		    @include breakpoint(xsmall){
+		    	top: 25%;
+		    }
+	    }
+	}
+	&__body{
+		@extend %absFlexCenter;
+		@extend %flex-column;
+		@extend %maxWidth100;
+		@extend %height100;
+		@extend %textAcenter;
+		@extend %fontSize18;
+		@include transform(scale(.9));
+	    opacity: 0;
+	    visibility: hidden;
+	    @include transition(all ease-in-out .3s);
+	}
+}
+
+.searchform{
+    @extend %maxWidth100;
+    width: 800px;
+    margin: 0 auto;
+    &__label{
+        margin-bottom: 15px;
+        @extend %heading-color;
+        @extend %fontSize18;
+    }
+    &__group{
+        @extend %posrelative;
+    }
+    &__input{
+        @extend %transparent-bg;
+        @extend %textAcenter;
+        @extend %fontWeight300;
+        @extend %maxWidth100;
+        @extend %heading-color;
+        @extend %border-none;
+        width: 800px;
+        border-bottom: 2px solid $heading-color;
+        font-size: 20px;
+        padding: 10px 40px 10px 10px;
+        @include transition(all .3s ease-out);
+        @include placeholder{
+            color: $heading-color;
+        }
+        @include breakpoint(small){
+            font-size: 30px;
+            padding: 10px 50px 10px 10px;    
+        }
+    }
+    &__submit{
+        @extend %posabsolute;
+        @extend %cursorPointer;
+        @extend %displayBlock;
+        @extend %border-none;
+        @extend %transparent-bg;
+        right: 5px;
+        color: #000;
+        padding: 0;
+        font-size: 20px;
+        height: 20px;
+        top: 50%;
+        line-height: 1;
+        @include transform(translateY(-50%));
+        i{
+            font-weight: 400;
+        }
+        &:hover{
+            @extend %primary-color;
+        }
+        @include breakpoint(small){
+            font-size: 30px;
+            height: 30px;
+        }
+    }
+} 

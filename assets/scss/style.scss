@@ -1,0 +1,77 @@
+/******************************
+
+INDEX:
+ 
+    00 - Base - Global
+    01 - Base - Typography
+
+    02 - Utilities - Helper
+    03 - Utilities - Common
+
+
+
+
+******************************/
+
+
+/*
+    Defult Primary Color:       #ff555d
+    Default Border Color:       #e1e1e1
+    Default Text Color:         #1f2025
+    Default Heading Color:      #020202
+    Default Body Font:          'Lora', serif
+*/
+
+
+
+// Fonts
+
+// <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet">;
+ 
+
+// Bootstrap
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/grid";
+
+// Base  
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/typography';
+
+// icon
+@import 'icon';
+
+// Utilities 
+@import 'utilities/helper';
+@import 'utilities/common';
+
+// Layout
+
+@import 'layout/footer';
+@import 'layout/header';
+ 
+// Components
+@import 'components/navigation';
+@import 'components/search-form';
+@import 'components/hamburger-icon';
+@import 'components/hero';
+@import 'components/button';
+@import 'components/section-title';
+@import 'components/bundle';
+@import 'components/plugins';
+@import 'components/services';
+@import 'components/funfact';
+@import 'components/testimonial';
+@import 'components/offcanvas';
+@import 'components/overlay';
+@import 'components/close-button';
+@import 'components/search-modal';
+
+
+
+// Color
+@import 'utilities/color'; 
+@import 'utilities/spacing'; 

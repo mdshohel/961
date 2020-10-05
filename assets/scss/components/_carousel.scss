@@ -1,0 +1,32 @@
+/*****************************
+12 - Components - Carousel
+*****************************/
+
+
+.tns-nav{
+	display: flex;
+	flex-direction: column;
+	max-width: 20px;
+	align-items: center;
+	button{
+		width: 13px;
+		height: 13px;
+		border-radius: 50%;
+		background-color: rgb( 219, 219, 251 );
+		padding: 0;
+		border: none;
+		transition: all .3s;
+		&:focus,
+		&:active{
+			outline: none;
+		}
+		&:not(:last-child){
+			margin-bottom: 35px;
+		}
+		&.tns-nav-active{
+			width: 18px;
+			height: 18px;
+			background-color: rgb( 121, 121, 242 );
+		}
+	}
+}

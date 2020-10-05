@@ -1,0 +1,480 @@
+/*****************************
+02 - Utilities - Helper
+*****************************/
+ 
+
+.container{
+	@include breakpoint(xlarge){
+		max-width: 100%;
+	}
+	@include breakpoint(xxlarge){
+		max-width: 1520px;
+	}
+}
+.wrapper{
+	position: relative;
+}
+
+.align-items-center{
+	align-items: center;
+}
+.justify-content-center{
+	justify-content: center;
+}
+.text{
+	&-left{
+		text-align: left;
+	}
+	&-right{
+		text-align: right;
+	}
+	&-center{
+		text-align: center;
+	}
+	@include breakpoint(medium){
+		&-md{
+			&-left{
+				text-align: left;
+			}
+			&-right{
+				text-align: right;
+			}
+			&-center{
+				text-align: center;
+			}
+		}
+	}
+}
+.mx{
+	&-auto{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.order{
+	&-1{
+		order: 1;
+	}
+	&-2{
+		order: 2;
+	}
+	@include breakpoint(large){
+		&-lg{
+			&-1{
+				order: 1;
+			}
+			&-2{
+				order: 2;
+			}
+			&-3{
+				order: 3;
+			}
+			&-4{
+				order: 4;
+			}
+		}
+	}
+	@include breakpoint(xlarge){
+		&-xl{
+			&-1{
+				order: 1;
+			}
+			&-2{
+				order: 2;
+			}
+			&-3{
+				order: 3;
+			}
+			&-4{
+				order: 4;
+			}
+		}
+	}
+}
+
+
+
+// Border
+%borderRadius{
+	@include border-radius($border-radius);
+}
+%borderRadius0{
+	@include border-radius(0);
+}
+%borderRadius50{
+	@include border-radius(50%);
+}
+%border{
+	border: 1px solid $border-color;
+}
+%border-left{
+	border-left: 1px solid $border-color;
+}
+%border-right{
+	border-right: 1px solid $border-color;
+}
+%border-top{
+	border-top: 1px solid $border-color;
+}
+%border-bottom{
+	border-bottom: 1px solid $border-color;
+}
+%border-none{
+	border: none;
+}
+%border-color{
+	border-color: $border-color;
+}
+
+%border-color-transparent{
+	border-color: transparent;
+}
+%border-style{
+	border-style: solid;
+}
+%border-width-1{
+	border-width: 1px;
+}
+%border-width-2{
+	border-width: 2px;
+}
+// Margin & Padding
+
+%margin0Auto{
+	margin: 0 auto;
+}
+%marginLeftAuto{
+	margin-left: auto;
+}
+%marginRightAuto{
+	margin-right: auto;
+}
+
+%margin-0{
+	margin: 0;
+}
+%marginTop-0{
+	margin-top: 0;
+}
+%marginLeft-0{
+	margin-left: 0;
+}
+%marginRight-0{
+	margin-right: 0;
+}
+%marginBottom-0{
+	margin-bottom: 0;
+}
+%padding-0{
+	padding: 0;
+}
+%paddingTop-0{
+	padding-top: 0;
+}
+%paddingLeft-0{
+	padding-left: 0;
+}
+%paddingRight-0{
+	padding-right: 0;
+}
+%paddingBottom-0{
+	padding-bottom: 0;
+}
+
+%posrelative{
+	position: relative;
+}
+%posabsolute{
+	position: absolute;
+}
+%posfixed{
+	position: fixed;
+}
+%pseudo{
+	position: absolute;
+	content: "";
+}
+%absCenter{
+	@extend %posabsolute;
+	left: 50%;
+	top: 50%;
+	@include transform(translate(-50%, -50%));
+}
+%vCenter{
+	top: 50%;
+	@include transform(translate(0, -50%));
+}
+%hCenter{
+	left: 50%;
+	@include transform(translate(-50%, 0));
+}
+%lefttop{
+	left: 0;
+	top: 0;
+}
+%left-0{
+	left: 0;
+}
+%right-0{
+	right: 0;
+}
+%top-0{
+	top: 0;
+}
+%bottom-0{
+	bottom: 0;
+}
+%fullwidth{
+	@extend %lefttop;
+	@extend %width100;
+	@extend %height100;
+}
+%basetransition{
+	@include transition($baseTransition);
+}
+%invisible{
+	visibility: hidden;
+	opacity: 0;
+}
+%visible{
+	visibility: visible;
+	opacity: 1;
+}
+
+%fontAwesome{
+	position: absolute;
+	font-family: fontAwesome;
+	line-height: 1;
+}
+
+%overflowHidden{
+	overflow: hidden;
+}
+%cursorPointer{
+	cursor: pointer;
+}
+/*-- Font --*/
+
+%font{
+	font-family: $body-font;
+}
+%headingFont{
+	font-family: $heading-font;
+}
+%fontSize24{
+	font-size: 24px;
+}
+%fontSize18{
+	font-size: 18px;
+}
+%fontSize16{
+	font-size: 16px;
+}
+%fontSize15{
+	font-size: 15px;
+}
+%fontSize14{
+	font-size: 14px;
+}
+%fontSize13{
+	font-size: 13px;
+}
+%fontSize12{
+	font-size: 12px;
+}
+%fontSize11{
+	font-size: 11px;
+}
+%fontWeight900{
+	font-weight: 900;
+}
+%fontWeight800{
+	font-weight: 800;
+}
+%fontWeight700{
+	font-weight: 700;
+}
+%fontWeight600{
+	font-weight: 600;
+}
+%fontWeight500{
+	font-weight: 500;
+}
+%fontWeight400{
+	font-weight: 400;
+}
+%fontWeight300{
+	font-weight: 300;
+}
+
+// Line Height
+
+%lineheight1{
+	line-height: 1;
+}
+%lineheightnormal{
+	line-height: normal;
+}
+
+// Width
+
+%widthAuto{
+	width: auto;
+}
+%heightAuto{
+	height: auto;
+}
+%width100{
+	width: 100%;
+}
+%height100{
+	height: 100%;
+}
+%widthInherit{
+	width: inherit;
+}
+%heightInherit{
+	height: inherit;
+}
+%maxWidth100{
+	max-width: 100%;
+}
+%maxHeight100{
+	max-height: 100%;
+}
+
+// Text Align
+
+%textAleft{
+	text-align: left;
+}
+%textAright{
+	text-align: right;
+}
+%textAcenter{
+	text-align: center;
+}
+
+// Text Transform
+ 
+%textTupper{
+	text-transform: uppercase;
+}
+%textTcap{
+	text-transform: capitalize;
+}
+%textTnone{
+	text-transform: none;
+}
+
+// Text Decoration
+
+%textDnone{
+	text-decoration: none;
+}
+%textDunder{
+	text-decoration: underline;
+}
+%textDline{
+	text-decoration: line-through;
+}
+
+// Inherit
+
+%lineHeightInherit{
+	line-height: inherit;
+}
+%fontSizeInherit{
+	font-size: inherit;
+}
+%fontFamilyInherit{
+	font-family: inherit;
+}
+%colorInherit{
+	color: inherit;
+}
+
+
+// Display
+
+%displayBlock{
+	display: block;
+}
+%displayInline{
+	display: inline;
+}
+%displayInlineBlock{
+	display: inline-block;
+}
+
+
+// Flexbox Extend
+
+%flexbox{
+	@include flexbox;
+}
+%justify-center{
+	@include justify-content(center);
+}
+%justify-around{
+	@include justify-content(space-around);
+}
+%justify-between{
+	@include justify-content(space-between);
+}
+%justify-start{
+	@include justify-content(flex-start);
+}
+%justify-end{
+	@include justify-content(flex-end);
+}
+%align-start{
+	@include align-items(flex-start);
+}
+%align-end{
+	@include align-items(flex-end);
+}
+%align-center{
+	@include align-items(center);
+}
+%align-stretch{
+	@include align-items(stretch);
+}
+%align-baseline{
+	@include align-items(baseline);
+}
+%flex-wrap{
+	@include flex-wrap(wrap);
+}
+%flex-nowrap{
+	@include flex-wrap(nowrap);
+}
+
+%flex-column{
+	@include flex-direction(column);
+}
+%flex-column-reverse{
+	@include flex-direction(column-reverse);
+}
+
+%flex-row{
+	@include flex-direction(row);
+}
+%flex-row-reverse{
+	@include flex-direction(row-reverse);
+}
+
+%absFlexCenter{
+	@include flexbox;
+	@include justify-content(center);
+	@include align-items(center);
+}
+%horizontalFlexCenter{
+	@include flexbox;
+	@include justify-content(center);
+}
+%verticalFlexCenter{
+	@include flexbox;
+	@include align-items(center);
+}

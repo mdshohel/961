@@ -1,0 +1,157 @@
+/*****************************
+10 - Layout - Header
+*****************************/
+
+/*-- 10.00 - Header --*/
+
+
+.header{
+    z-index: 9999;
+	position: relative;
+    .logo{
+        a{
+            display: block;
+            text-align: left;
+        }
+	}
+	&__container{
+		max-width: 1520px;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+	}
+    &__top,
+    &__bottom{
+        position: relative;
+	}
+	&__top{
+		background-color: #092846;
+		padding-top: 17px;
+		padding-bottom: 17px;
+		.top-navigation{
+			display: none;
+			@include breakpoint(xlarge){
+				display: block;
+			}
+		}
+		.header{
+			&__col{
+				&--left{
+					flex-basis: 45%;
+					max-width: 45%;
+					@include breakpoint(xlarge){
+						flex-basis: 25%;
+						max-width: 25%;
+					}
+				}
+				&--right{
+					flex-basis: 45%;
+					max-width: 45%;
+					@include breakpoint(xlarge){
+						flex-basis: 32%;
+						max-width: 32%;
+					}
+					@include breakpoint(xxlarge){
+						flex-basis: 29%;
+						max-width: 29%;
+					}
+				}
+			}
+		}
+	}
+    &__main{
+        display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+    }
+	&__col{
+        flex: 1 0 auto;
+		max-width: 100%;
+		position: relative;
+		padding-right: 15px;
+		padding-left: 15px;
+        &--left{
+            text-align: left;
+        }
+        &--center{
+            text-align: center;
+        }
+        &--right{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    } 
+    &__element{
+        position: relative;
+		line-height: 1;
+		&--search-icon{
+			margin-right: 30px;
+			@include breakpoint(xlarge){
+				margin: 0;
+			}
+		}
+		&--search-form{
+			margin-right: 80px;
+			display: none;
+			@include breakpoint(xlarge){
+				display: block;
+			}
+		}
+		&--burger-icon{
+			line-height: .8;
+			margin-left: 30px;
+		} 
+		&--search-icon,
+		&--burger-icon{
+			display: block;
+			@include breakpoint(xlarge){
+				display: none;
+			}
+		}
+	}
+	&__bottom{
+		background-color: #f5fafe;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		display: none;
+		@include breakpoint(xlarge){
+			display: block;
+		}
+	}
+}
+
+.account-link{
+	display: block;
+	color: #c1bfbf;
+	&:hover{
+		color: #fff;
+	}
+	i{
+		color: #c1bfbf;
+		font-size: 22px;
+		line-height: 1;
+	}
+	span{
+		font-weight: 500;
+		font-size: 16px;
+		text-transform: capitalize;
+		padding-left: 15px;
+		display: none;
+		@include breakpoint(xlarge){
+			display: inline-block;;
+		}
+	}
+}
+
+.header-icon{
+	i{
+		color: #fff;
+		font-size: 22px;
+		line-height: 1;
+	}
+}

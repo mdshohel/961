@@ -1,0 +1,23 @@
+.btn-close{
+    font-size: 30px;
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    opacity: 1;
+	z-index: 5;
+    background: transparent;
+    border: none;
+    padding: 0;
+    i{
+	    display: inline-block;
+	    vertical-align: top;
+		transition: all .3s;
+		font-weight: 400;;
+    }
+    &:hover{
+    	i{
+    		@include transform(rotate(90deg));
+    		color: $primary-color;
+    	}
+    }
+}

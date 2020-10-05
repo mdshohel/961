@@ -1,0 +1,106 @@
+/*****************************
+11 - Layout - Footer
+*****************************/
+
+.footer{
+	&-top{
+		background-color: #f4faff;
+		color: #384a5f;
+		background-image: url(../images/banner/footer_bg_shape.png);
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		padding: 77px 0 35px;
+		@include breakpoint(medium){
+			padding: 96px 0 55px;
+		}
+		@include breakpoint(large){
+			padding: 115px 0 75px;
+		}
+	}
+	&-bottom{
+		background-color: #1f252c;
+		padding: 14px 0;
+	}
+}
+
+.footer-widget{
+	&__title{
+		font-size: 23px;
+		margin-bottom: 38px;
+		@include breakpoint(xlarge){
+			margin-bottom: 50px;
+		}
+		@include breakpoint(xxlarge){
+			font-size: 29px;
+		}
+	}
+}
+
+.text-widget{
+	p{
+		font-size: 16px;
+	}
+}
+
+.footer-menu{
+	&__item{
+		&:not(:last-of-type){
+			margin-bottom: 16px;
+		}
+		a{
+			font-size: 16px;
+		}
+	}
+}
+
+.newsletter-widget{
+	p{
+		font-size: 16px;
+		margin-bottom: 25px;
+	}
+}
+
+.newsletter{
+	position: relative;
+	&__input {
+		background-color: #fff;
+		box-shadow: 0px 0px 45px 0px rgba( 0, 26, 96, .2 );
+		height: 45px;
+		width: 100%;
+		border-radius: 100px;
+		font-size: 14px;
+		border: none;
+		padding-left: 25px;
+		padding-right: 130px;
+		&:hover,
+		&:focus{
+			outline: none;
+		}
+		@include placeholder {
+			color: #b3d7f5;
+		}
+	}
+	&__submit{
+		background-color: rgb( 62, 100, 175 );
+		width: 119px;
+		height: 37px;
+		font-size: 14px;
+		color: #fff;
+		line-height: 37px;
+		padding: 0;
+		border: none;
+		border-radius: 35px;
+		position: absolute;
+		right: 4px;
+		top: 4px;
+	}
+}
+
+.copyright-text{
+	color: #f4faff;
+	font-size: 16px;
+	padding-bottom: 15px;
+	@include breakpoint(medium){
+		padding: 0;
+	}
+}

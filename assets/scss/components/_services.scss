@@ -1,0 +1,135 @@
+.services-area{
+	background-image: url(../images/banner/service_shape.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
+	padding-top: 77px;
+	padding-bottom: 100px;
+	margin-bottom: 50px;
+	@include breakpoint(medium){
+		padding: 97px 0px 100px 0px;
+	}
+	@include breakpoint(large){
+		padding: 100px 0px 120px 0px;
+	}
+	@include breakpoint(xlarge){
+		padding: 100px 0px 150px 0px;
+	}
+}
+
+.services-heading{
+	&__sub{
+		font-weight: 500;
+		text-transform: capitalize;
+		margin: 0;
+	}
+	&__main{
+		font-size: 41px;
+		font-weight: 500;
+		margin-bottom: 13px;
+	}
+	&__desc{
+		margin-bottom: 31px;
+	}
+}
+
+
+.service{
+	border-radius: 10px;
+	background-image: -moz-linear-gradient( 45deg, rgb(255,255,255) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 45deg, rgb(255,255,255) 0%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 45deg, rgb(255,255,255) 0%, rgb(255,255,255) 100%);
+	box-shadow: 0px 0px 45px 0px rgba( 0, 26, 96, .2 );
+	padding: 30px;
+	padding-bottom: 10px;
+	transition: all .3s;
+	@include breakpoint(medium){
+		padding: 40px;
+		padding-bottom: 20px;
+	}
+	&--1{
+		@include breakpoint(medium){
+			margin-top: 135px;
+		}
+		@include breakpoint(xxlarge){
+			margin-top: 175px;
+		}
+	}
+	&--4{
+		@include breakpoint(medium){
+			margin-top: -165px; 
+		}
+		@include breakpoint(xxlarge){
+			margin-top: -175px;
+		}
+	}
+	&__icon{
+		margin-bottom: 17px;
+		@include breakpoint(medium){
+			margin-bottom: 26px;
+		}
+	}
+	&__title{
+		font-weight: 500;
+		font-size: 26px;
+		margin-bottom: 11px;
+	}
+	&__desc{
+		margin-bottom: 16px;
+		font-size: 16px;
+	}
+	&__btn{
+		display: block;
+		position: relative;
+		i{
+			transform: rotate(180deg);
+			display: inline-block;
+			font-size: 60px;
+			line-height: 1;
+			color: #0261f3;
+		}
+	}
+	&:hover{
+
+
+		.service{
+			&__title,
+			&__desc{
+				color: #fff;
+			}
+			&__btn{
+				i{
+					color: #fff;
+				}
+			}
+		}
+	}
+	&--wordpress{
+		&:hover{
+			background-image: -moz-linear-gradient( 45deg, #029FC9 0%, #0294bb 100%);
+			background-image: -webkit-linear-gradient( 45deg, #029FC9 0%, #0294bb 100%);
+			background-image: -ms-linear-gradient( 45deg, #029FC9 0%, #0294bb 100%);
+		}
+	}
+	&--html{
+		&:hover{
+			background-image: -moz-linear-gradient( 45deg, #6B45A8 0%, #5F3B9E 100%);
+			background-image: -webkit-linear-gradient( 45deg, #6B45A8 0%, #5F3B9E 100%);
+			background-image: -ms-linear-gradient( 45deg, #6B45A8 0%, #5F3B9E 100%);
+		}
+	}
+	&--shopify{
+		&:hover{
+			background-image: -moz-linear-gradient( 45deg, #95BF47 0%, #5E8E3E 100%);
+			background-image: -webkit-linear-gradient( 45deg, #95BF47 0%, #5E8E3E 100%);
+			background-image: -ms-linear-gradient( 45deg, #95BF47 0%, #5E8E3E 100%);
+		}
+	}
+	&--graphic{
+		&:hover{
+			background-image: -moz-linear-gradient( 45deg, rgb(62,100,175) 0%, rgb(2,97,243) 100%);
+			background-image: -webkit-linear-gradient( 45deg, rgb(62,100,175) 0%, rgb(2,97,243) 100%);
+			background-image: -ms-linear-gradient( 45deg, rgb(62,100,175) 0%, rgb(2,97,243) 100%);
+		}
+	}
+}

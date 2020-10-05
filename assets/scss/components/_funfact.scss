@@ -1,0 +1,29 @@
+
+
+.funfact{
+	text-align: center;
+	&__icon{
+		margin-bottom: 27px;
+		@include breakpoint(medium){
+			margin-bottom: 32px;
+		}
+		@include breakpoint(xxlarge){
+			margin-bottom: 51px;
+		}
+	}
+	&__content{
+		font-size: 20px;
+		max-width: 80%;
+		margin: 0 auto;
+		@include breakpoint(large){
+			font-size: 26px;
+			max-width: 70%;
+		}
+		@include breakpoint(xxlarge){
+			max-width: 60%;
+		}
+	}
+	&__text{
+		font-weight: 400;
+	}
+}

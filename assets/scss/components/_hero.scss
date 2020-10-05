@@ -1,0 +1,79 @@
+
+.hero-area{
+	background-image: url(../images/banner/banner_bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #fff;
+	min-height: 500px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex-direction: column;
+	padding-top: 74px;
+	padding-bottom: 68px;
+	@include breakpoint(medium){
+		flex-direction: row;
+		padding: 0;
+	}
+	@include breakpoint(xlarge){
+		min-height: 530px;
+	}
+	@include breakpoint(xxlarge){
+		min-height: 850px;
+	}
+}
+
+
+.hero__image{
+	max-width: 90%;
+	margin: 50px auto 0;
+	@include breakpoint(medium){
+		width: 47%;
+		position: absolute;
+		right: 30px;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0;
+	}
+	@include breakpoint(xlarge){
+		width: 45%;
+		right: 110px;
+	}
+}
+
+.hero-content{
+	text-align: center;
+	@include breakpoint(medium){
+		text-align: left;
+	}
+	&__title{
+		font-size: 3.8rem;
+		font-weight: 700;
+		line-height: 1.43;
+		margin-bottom: 25px;
+		@include breakpoint(xxlarge){
+			margin-bottom: 35px;
+		}
+	}
+	&__desc{
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 23px;
+		margin-bottom: 30px;
+		@include breakpoint(xxlarge){
+			margin-bottom: 40px;
+		}
+	}
+	&__btn-group{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		@include breakpoint(medium){
+			justify-content: flex-start;
+		}
+		.btn{
+			margin: 5px;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+/*****************************
+23 - Components - Off Canvas
+*****************************/
+
+.offcanvas{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	visibility: hidden;
+	opacity: 0;
+	color: $heading-color;
+	background-color: #fff;
+	width: 320px;
+	min-height: 100vh;
+	z-index: 9999999;
+	@include transition(all 400ms ease-out);
+	@include transform(translate(200px, 0));
+	@include box-shadow(0px 0px 87px 0px rgba(0, 0, 0, 0.09));
+	@include breakpoint(small){
+		width: 390px;
+	}
+	&.from-left{
+		right: auto;
+		left: 0;
+		@include transform(translate(-200px, 0));
+		.offcanvas{
+			&-inner{
+				padding-right: 40px;
+				margin-right: 0;
+			}
+		}
+	}
+	&.open{
+		visibility: visible;
+		opacity: 1;
+		@include transform(translate(0, 0));
+	}
+	.btn-close{
+		margin-left: auto;
+		margin-bottom: 40px;
+		width: auto;
+		height: auto;
+		i{
+			font-size: 32px;
+		}
+	}
+	&-wrapper{
+		position: relative;
+	}
+	&-inner{
+		overflow-x: hidden;
+		height: auto;
+		padding: 40px;
+		padding-top: 20px;
+		overflow-y: auto;
+		max-height: 100vh;
+		padding-right: 90px;
+		margin-right: -70px;
+	}
+}

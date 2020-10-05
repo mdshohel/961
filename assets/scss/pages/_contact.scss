@@ -1,0 +1,54 @@
+/*****************************
+40 - Pages - Contact
+*****************************/
+
+.contact-page-details{
+	margin-top: 44px;
+	@include breakpoint(medium){
+		margin-top: 51px;
+	}
+	p{
+		color: #818183;
+		font-size: 18px;
+		font-style: italic;
+		line-height: 1.5;
+		@include breakpoint(medium){
+			font-size: 20px;
+			line-height: 1.7;
+		}
+	}
+}
+
+.contact-form{
+	margin-top: 50px;
+	margin-bottom: 60px;
+	@include breakpoint(medium){
+		margin-top: 48px;
+		margin-bottom: 80px;
+	}
+	@include breakpoint(large){
+		margin-top: 61px;
+		margin-bottom: 100px;
+	}
+	&__title{
+		color: #000;
+		font-weight: 500;
+		font-style: italic;
+		font-family: $body-font;
+		margin-bottom: 31px;
+	}
+}
+
+.contact-info-area{
+	margin-bottom: 30px;
+	@include breakpoint(medium){
+		margin-bottom: 50px;
+	}
+	@include breakpoint(large){
+		margin-bottom: 60px;
+	}
+}
+
+.google-map-area{
+	margin-bottom: 60px;
+}
